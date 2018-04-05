@@ -8,12 +8,13 @@
         n++;
         if (n % 2 === 0) {
             items.forEach(function (ele, index) {
+                ele.style.display = "block"
                 let angle = index * Math.PI / 3;
                 let x = R * Math.cos(angle);
                 let y = R * Math.sin(angle);
                 ele.style.left = x + "px";
                 ele.style.top = y + "px";
-                ele.style.display = "block"
+
                 ele.style.transform = "scale(1,1)";
 
 
@@ -23,7 +24,7 @@
                 ele.style.left = 0;
                 ele.style.top = 0;
                 ele.style.transform = "scale(0.3,0.3)";
-                ele.style.display = "none";
+                // ele.style.display = "none";
 
             })
         }
